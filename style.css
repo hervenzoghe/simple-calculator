@@ -3,22 +3,53 @@
 
 :root {
     /********************** COLORS ************************/
+    /* Light Theme */
     --main-white: #F5F5F5;
     --screen-light: #F0F0F0;
     --button-bg-light: #E8E8E8;
-    --button-border-light: #333333;
-    --classic-orange: #FF9500;
 
     /* Dark Theme */
     --main-black: #17181A;
     --screen-dark: #444444;
     --button-bg-dark: #303030;
-    --button-border-dark: #111111;
+
+    /* Both Theme */
+    --button-gray: #9ca3af;
     --classic-orange: #FF9500;
 
     /**************************** FONT SIZE ************************/
-    --text-base: 1rem; /* 16px*/
+    --text-base: 1rem; /* 16px */
+    --line-height-base: 1.5rem; /* 24px*/
+    --text-lg: 1.125rem; /* 18px */
+    --line-height-lg: 1.75rem; /* 28px*/
+    --text-xl: 1.25rem; /* 20px */
+    --line-height-xl: 1.5rem; /* 28px */
+    --text-2xl: 1.5rem; /* 24px */
+    --line-height-2xl: 2rem; /* 32 px */
+    --text-3xl: 1.875rem; /* 30px */
+    --line-height-3xl: 2.25rem; /* 36px */
+    --text-4xl: 2.25rem; /* 36px */
+    --line-height-4xl: 2.5rem; /* 40px */
 }
+
+/* SETTING THEME SWITCHER */
+[data-theme="light"] {
+    --text-color: #F5F5F5;
+    --bg-color: #F0F0F0;
+    --button-bg: #E8E8E8;
+    --button-gray: #9ca3af;
+    --classic-orange: #FF9500;
+}
+
+[data-theme="dark"] {
+    --text-color: #17181A;
+    --bg-color: #444444;
+    --button-bg: #303030;
+    --button-gray: #9ca3af;
+    --classic-orange: #FF9500;
+}
+
+/* BASIC STYLE */
 
 * { 
     margin: 0;
@@ -28,32 +59,171 @@
 
 body {
     font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--screen-light);
+}
+
+p, a {
+    font-size: var(--text-lg);
+}
+
+a {
+    text-decoration: underline;
+    color: var(--main-white);
+}
+
+
+/* HEADER AND FOOTER */
+
+header, footer {
+    background: var(--classic-orange);
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main-white);
+}
+
+/* HEADER AND FOOTER CONTAINER */
+.header-container, .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container p {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+p svg {
+    fill: var(--main-white)
+}
+
+.light {
+    display: none;
+}
+
+/* THEME SWITCHER*/
+
+#theme-switcher svg{
+    fill: var(--main-white);
 }
 
 main {
-    margin: 48px auto;
+    margin: 96px auto;
+    padding-inline: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 svg {
     fill: var(--main-black);
 }
 
+/* CALCULATOR LAYOUT */
+#calculator {
+    width: 100%;
+    height: 650px;
+    background: var(--screen-light);
+    border-radius: 40px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
+/* CALCULATOR KEYKOARD */
 
 #keyboard {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     gap: 8px;
-    padding: 18px;
+    height: 70%;
 }
 
+/* CALCULATOR BUTTONS */
 button {
-    background: var(--button-bg-light);
-    color: var(--main-black);
+    background: var(--button-bg-dark);
+    color: var(--main-white);
     font-size: var(--text-base);
+    line-height: var(--line-height-base);
     border: none;
     width: 64px;
     height: 64px;
     border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BUTTON CUSTOMIZATION */
+#clear svg {
+    fill: var(--main-white)
+}
+
+#zero {
+    grid-column: 1 / span 2;
+    width: 100%;
+    border-radius: 36px;
+}
+
+.orange {
+    background: var(--classic-orange);
+    color: var(--main-white);
+}
+
+.lightgray {
+    background: var(--button-gray);
+}
+
+/* ZONE CUSTOMIZATION */
+#history{
+    height: 180px;
+    color: var(--button-gray);
+}
+
+#calcul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: var(--text-2xl);
+    height: 30%;
+}
+
+#operation, #result {
+    height: 40px;
+    color: var(--main-black);
+    text-align: right;
+}
+
+#history {
+    font-size: var(--text-base);
+}
+
+#operation {
+    font-size: var(--text-2xl);
+}
+
+@media screen and (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 375px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header-container {
+        gap: 600px;
+    }
 }
