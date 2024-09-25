@@ -1,0 +1,59 @@
+/*************************** MAIN FONT ****************************/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    /********************** COLORS ************************/
+    --main-white: #F5F5F5;
+    --screen-light: #F0F0F0;
+    --button-bg-light: #E8E8E8;
+    --button-border-light: #333333;
+    --classic-orange: #FF9500;
+
+    /* Dark Theme */
+    --main-black: #17181A;
+    --screen-dark: #444444;
+    --button-bg-dark: #303030;
+    --button-border-dark: #111111;
+    --classic-orange: #FF9500;
+
+    /**************************** FONT SIZE ************************/
+    --text-base: 1rem; /* 16px*/
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin: 48px auto;
+}
+
+svg {
+    fill: var(--main-black);
+}
+
+
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    padding: 18px;
+}
+
+button {
+    background: var(--button-bg-light);
+    color: var(--main-black);
+    font-size: var(--text-base);
+    border: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 100%;
+}
