@@ -154,7 +154,7 @@ svg {
 button {
     background: var(--button-bg-dark);
     color: var(--main-white);
-    font-size: var(--text-base);
+    font-size: var(--text-xl);
     line-height: var(--line-height-base);
     border: none;
     width: 64px;
