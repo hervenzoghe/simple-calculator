@@ -18,6 +18,7 @@
     --classic-orange: #FF9500;
 
     /**************************** FONT SIZE ************************/
+    --text-sm: 0.875rem;
     --text-base: 1rem; /* 16px */
     --line-height-base: 1.5rem; /* 24px*/
     --text-lg: 1.125rem; /* 18px */
@@ -179,6 +180,7 @@ button {
 .orange {
     background: var(--classic-orange);
     color: var(--main-white);
+    font-size: var(--text-2xl);
 }
 
 .lightgray {
@@ -199,7 +201,7 @@ button {
     height: 30%;
 }
 
-#operation, #result {
+.operation, #output {
     height: 40px;
     color: var(--main-black);
     text-align: right;
@@ -209,8 +211,21 @@ button {
     font-size: var(--text-base);
 }
 
-#operation {
+.operation {
     font-size: var(--text-2xl);
+}
+
+.operation label {
+    font-size: var(--text-sm);
+}
+
+#operation {
+    width: 320px;
+    border: none;
+    background: none;
+    opacity: 0.5;
+    font-size: var(--text-sm);
+    text-align: right;
 }
 
 @media screen and (min-width: 768px) {
