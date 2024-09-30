@@ -22,35 +22,32 @@
         <div id="calculator">
             <div id="calcul">
                 <div id="history">
-                    <span id="history-value"></span>
-                </div>
-                <div class="operation">
-                    <input type="text" name="operation" id="operation" placeholder="Your operation">
+                    <p id="history-value"></p>
                 </div>
                 <div id="output">
-                    <span id="output-value"></span>
+                    <p id="output-value"></p>
                 </div>
             </div>
             <div id="keyboard">
-                <button id="reset" class="lightgray">AC</button>
-                <button id="clear" class="lightgray">DEL</button>
-                <button id="percent" class="lightgray">%</button>
-                <button id="division" class="orange">/</button>
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
-                <button id="times" class="orange">*</button>
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="minus" class="orange">-</button>
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="plus" class="orange">+</button>
-                <button id="zero">0</button>
-                <button id="dot">.</button>
-                <button id="equal" class="orange">=</button>
+                <button id="clear" class="lightgray operator">AC</button>
+                <button id="backspace" class="lightgray operator">DEL</button>
+                <button id="%" class="lightgray operator">%</button>
+                <button id="/" class="orange operator">&#247;</button>
+                <button id="7" class="number">7</button>
+                <button id="8" class="number">8</button>
+                <button id="9" class="number">9</button>
+                <button id="*" class="orange operator">&times;</button>
+                <button id="4" class="number">4</button>
+                <button id="5" class="number">5</button>
+                <button id="6" class="number">6</button>
+                <button id="-" class="orange operator">-</button>
+                <button id="1" class="number">1</button>
+                <button id="2" class="number">2</button>
+                <button id="3" class="number">3</button>
+                <button id="+" class="orange operator">+</button>
+                <button id="0" class="number zero">0</button>
+                <button></button>
+                <button id="=" class="orange operator">=</button>
             </div>
         </div>
     </main>
@@ -62,7 +59,6 @@
             </p>
         </div>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/13.1.1/math.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
